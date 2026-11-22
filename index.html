@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><script type='text/javascript' nonce='AqZ/pURo9wCAd29nqdho1A==' src='https://contribution.usercontent.google.com/ruhS06ViHcBD29wGTed4XVeIyNHJAQqxyAMWF8MTuytf7FgkHM1oM6SsH6QaJcZjUBMijQbQmsWPk-8PHomwyfNmD-6brKW-R8FXoPlfE1hdlVdz4NMCYXlFvyOho0LgpbjUMqQ7315z14BKPmkdAlMU4JKMBNCpo_6IxMELQS4f3lQdgrjPzEE8C2zsoJa3emN9KaP6LPlaWbdj8vJsimPCTjxhNusb3rv9WS0681-eKwdNYlP36_gEgrBPQR5RMEl_xspY8s3818FaGJaW4oEMyC6W5IvwnUM0Z7g8h0EPmicsalkfyL_x7GtSwBeP1Ea4fbxdpMV4pzdtGevubyAehjgkMyNHO7GxXrZQjOk1USktf2yn1fWQa47i0fp7C1QVlgqeWYzU6Dgoja-eiufXNyg3Dt8fxZkWEj0IJnLmDgOpHCAxPa-s96WE36LeiE6ToGU71AUVZG_CzYQSh-qDrkiuIFOLSIYFoMzr3he_0Gn_vH5Co0ml0mCJifHaM0V_0XNUAohvBpuUiHn9K1QbxTbDRRzGdufGGytlCyNve5D4OkniyAR1m-XMc_BTjyKng0r0kK4wbIWrr2x8FfCsvDCQ_qfV6QPK0PpU6og1CrOb3luFYEK8XMnt8csYxTDEg4S83nIzmFLbdY13eNTYYkvdYP-bPoXQvupZAmkp-41MmNCNAISD-kQ33gVsGGT0jDGZyJgJdnnMnSGhSHyEH-OWOCvvxgzNvfdeXPKQOeOp'></script>
+<head><script type='text/javascript' nonce='LF5gDDI2mgBRqQmrSfV0mQ==' src='https://contribution.usercontent.google.com/RPvnzYlH00LN_RRksVJOmFEF1aiaVUMlM-UeuOw-RiZnIwr-Wcy8QTSukGHlAVLCa1FvC43a113escMEdmMJmFCxnAED3uh1jSYXW4jefqW-DN3RQ22z5OVeU7oqUlByCUk_LytJF70Z6nl6mwVXyvt8xmlVGuRf9ii_Cjh0DJuL4tsatlZ3YR8Z70g2isRmEsjx9j6ke5wFBhfHdxBO9o_YqBIpEACUKrx692oiOj1LyvqsBrw5dLfkS6zub9LzCVJKQLYGCQIftd_0InH12keN2tEvRq8PtKcXfS9eGo0pu6aJ5gu1lKGI6Vg1doU4hms1duNimu2y75s25nvSeQvdwWG2qtX3tn97KIQ3k2feujvzRQeVlikOpzCfmEmXm6VIPX1U2G_pDGqDcppc92xlsiIXv7AvqS8zsi23MnxhKx_YZNj6Za6ZHPrRoSwWKDSva5kajweLpN2YSyQwyOZXVNH-EFhCLxKVBrPZ_gs06oxjLg5Kg_1_ysOklRCjWJHcQjA2d5kIi33fpmJSu82cAKDbvj-J_lviRZ4LNljLsru8gQ_yRGMykoXvuX8OXXs5rrIyrG31zC83KEOq5ufLl6O6iQ9i28S0oHbslqt2Uhgnw8flF4k55nG4vnSvqblRMvC4yjpetlaDJGBizVEIPUrwPQ9jtMGFSXnMqwfKm8l0uEAqFay4WMiR_n1uhpwD3asexu424mMwBtNs1HNAR1GbcBdXCyNE-cBORjWQiRlS'></script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SteelAtlas — Explorador Metalúrgico y Selector de Aceros SAE</title>
@@ -206,6 +206,10 @@
       .js-plotly-plot {
         width: 100% !important;
       }
+      canvas.lab-canvas {
+        max-width: 100% !important;
+        height: auto !important;
+      }
     }
   </style>
 </head>
@@ -263,32 +267,36 @@
   <!-- ==================== INTRO BANNER ==================== -->
   <section class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-2">
     <div class="sci-card px-5 py-3.5 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFF] to-[#EFF6FF]/60 border-l-4 border-l-[#1E3A8A]">
-      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-          <strong class="text-slate-900">SteelAtlas</strong> es una plataforma interactiva de análisis metalúrgico construida sobre una base auditada de <strong class="font-mono-num text-[#1E3A8A]"><span class="js-n-total">190</span> registros de aceros SAE</strong> (<span class="font-mono-num" id="intro-grados-unicos">85</span> grados únicos entre aceros al carbono simple, resulfurados, al manganeso y de baja aleación). Recorre las cinco secciones para explorar la <strong>auditoría de datos</strong>, el <strong>efecto real del % de carbono</strong>, las <strong>microestructuras y tratamientos térmicos</strong>, la <strong>validación estadística (ANOVA / Kruskal–Wallis)</strong> y un <strong>selector interactivo de grados SAE</strong> guiado por resistencia, ductilidad y tenacidad.
-        </p>
-      </div>
+      <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <strong class="text-slate-900">SteelAtlas</strong> integra el <strong>análisis estadístico de <span class="font-mono-num text-[#1E3A8A]"><span class="js-n-total">190</span> registros de aceros SAE auditados</span></strong> (<span class="font-mono-num" id="intro-grados-unicos">85</span> grados únicos) con un <strong>laboratorio virtual interactivo</strong> —<strong>Selector de Grado SAE</strong>, <strong>Ensayo de Dureza Brinell (HB)</strong> y <strong>Péndulo de Impacto Charpy</strong>— para explorar de forma rigurosa y visual cómo la composición química y los tratamientos térmicos determinan el desempeño mecánico real.
+      </p>
     </div>
   </section>
 
   <!-- ==================== TAB NAVIGATION BAR ==================== -->
   <div class="sticky top-0 z-30 bg-[#F8FAFC]/95 backdrop-blur-sm border-b border-slate-200 mt-2 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center gap-1.5 overflow-x-auto pt-2" aria-label="Navegación principal">
-        <button type="button" data-tab="tab1" class="tab-btn active whitespace-nowrap px-3.5 py-2 text-xs sm:text-sm rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
+      <nav class="flex items-center gap-1 overflow-x-auto lg:flex-wrap pt-2 pb-0.5" aria-label="Navegación principal">
+        <button type="button" data-tab="tab1" class="tab-btn active whitespace-nowrap px-3 py-2 text-xs rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
           <span class="font-mono-num text-[11px] mr-1 opacity-70">01</span> Auditoría y Datos
         </button>
-        <button type="button" data-tab="tab2" class="tab-btn whitespace-nowrap px-3.5 py-2 text-xs sm:text-sm rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
+        <button type="button" data-tab="tab2" class="tab-btn whitespace-nowrap px-3 py-2 text-xs rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
           <span class="font-mono-num text-[11px] mr-1 opacity-70">02</span> Efecto del % Carbono
         </button>
-        <button type="button" data-tab="tab3" class="tab-btn whitespace-nowrap px-3.5 py-2 text-xs sm:text-sm rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
+        <button type="button" data-tab="tab3" class="tab-btn whitespace-nowrap px-3 py-2 text-xs rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
           <span class="font-mono-num text-[11px] mr-1 opacity-70">03</span> Procesamiento y Microestructura
         </button>
-        <button type="button" data-tab="tab4" class="tab-btn whitespace-nowrap px-3.5 py-2 text-xs sm:text-sm rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
+        <button type="button" data-tab="tab4" class="tab-btn whitespace-nowrap px-3 py-2 text-xs rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
           <span class="font-mono-num text-[11px] mr-1 opacity-70">04</span> Análisis Estadístico (ANOVA)
         </button>
-        <button type="button" data-tab="tab5" class="tab-btn whitespace-nowrap px-3.5 py-2 text-xs sm:text-sm rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
+        <button type="button" data-tab="tab5" class="tab-btn whitespace-nowrap px-3 py-2 text-xs rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
           <span class="font-mono-num text-[11px] mr-1 opacity-70">05</span> Selector SAE y Tenacidad
+        </button>
+        <button type="button" data-tab="tab6" class="tab-btn whitespace-nowrap px-3 py-2 text-xs rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
+          <span class="font-mono-num text-[11px] mr-1 opacity-70">06</span> Ensayo Virtual Brinell (HB)
+        </button>
+        <button type="button" data-tab="tab7" class="tab-btn whitespace-nowrap px-3 py-2 text-xs rounded-t-lg border border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/80">
+          <span class="font-mono-num text-[11px] mr-1 opacity-70">07</span> Péndulo de Impacto Charpy
         </button>
       </nav>
     </div>
@@ -1006,6 +1014,32 @@
         </div>
       </div>
 
+      <!-- Caja Visual de 3 Pasos: ¿Cómo usar esta herramienta? -->
+      <div class="sci-card p-4 sm:p-5 bg-white border-t-4 border-t-[#D97706]">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-amber-100 text-[#B45309] text-xs font-bold">
+            <svg class="w-3.5 h-3.5" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </span>
+          <h3 class="text-sm font-bold text-slate-900">¿Cómo usar esta herramienta?</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-700">
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#1E3A8A] text-white font-mono-num font-semibold text-[11px]">Paso 1</span>
+            <p class="leading-relaxed">Define el límite elástico (<strong>YS</strong>) mínimo que exige tu pieza para no deformarse permanentemente.</p>
+          </div>
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#1E3A8A] text-white font-mono-num font-semibold text-[11px]">Paso 2</span>
+            <p class="leading-relaxed">Ajusta la <strong>elongación mínima</strong> para asegurar ductilidad y evitar fractura frágil.</p>
+          </div>
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#D97706] text-white font-mono-num font-semibold text-[11px]">Paso 3</span>
+            <p class="leading-relaxed">Filtra por <strong>condición de procesamiento</strong> (opcional) y compara los candidatos ordenados por su Índice de Tenacidad (<strong>I<sub>T</sub></strong>).</p>
+          </div>
+        </div>
+      </div>
+
       <!-- Interactive Controls Panel -->
       <div class="sci-card p-5">
         <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
@@ -1114,6 +1148,288 @@
           </button>
         </div>
         <div id="candidatos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================== -->
+    <!-- PESTAÑA 6: ENSAYO VIRTUAL BRINELL (HB)                     -->
+    <!-- ========================================================== -->
+    <section id="panel-tab6" class="tab-panel space-y-6">
+      <div>
+        <span class="text-[11px] font-semibold uppercase tracking-wider text-[#D97706]">Sección 06 — Laboratorio Virtual</span>
+        <h2 class="text-xl font-bold text-slate-900">Ensayo Virtual de Dureza Brinell (HBW 10/3000)</h2>
+        <p class="text-sm text-slate-600 mt-0.5">Simulación física de indentación con esfera de carburo de tungsteno (<span class="font-mono-num">D = 10 mm</span>, <span class="font-mono-num">P = 3000 kgf</span>) y medición óptica de huella sobre el catálogo real.</p>
+      </div>
+
+      <!-- Guía rápida de 3 pasos -->
+      <div class="sci-card p-4 sm:p-5 bg-white border-t-4 border-t-[#1E3A8A]">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-blue-50 text-[#1E3A8A] text-xs font-bold">
+            <svg class="w-3.5 h-3.5" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="12" cy="12" r="9"/>
+              <path stroke-linecap="round" d="M12 8v4l2.5 1.5"/>
+            </svg>
+          </span>
+          <h3 class="text-sm font-bold text-slate-900">Guía rápida del ensayo Brinell</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-700">
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#1E3A8A] text-white font-mono-num font-semibold text-[11px]">Paso 1</span>
+            <p class="leading-relaxed">Selecciona un <strong>grado SAE</strong> y su <strong>condición de procesamiento</strong> del catálogo auditado.</p>
+          </div>
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#1E3A8A] text-white font-mono-num font-semibold text-[11px]">Paso 2</span>
+            <p class="leading-relaxed">Presiona <strong>"Aplicar Carga (3000 kgf)"</strong> para indentar la probeta con la esfera de carburo de tungsteno de <span class="font-mono-num">D = 10 mm</span>.</p>
+          </div>
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#D97706] text-white font-mono-num font-semibold text-[11px]">Paso 3</span>
+            <p class="leading-relaxed">Observa la <strong>huella en el microscopio óptico</strong> con retícula milimétrica y compara la dureza real medida.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles Brinell -->
+      <div class="sci-card p-5 space-y-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-end">
+          <div class="lg:col-span-6 space-y-1.5">
+            <label for="brinell-select" class="block text-xs font-semibold text-slate-700">Probeta de Acero SAE (registros con dureza HB disponible)</label>
+            <select id="brinell-select" class="w-full px-3 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A] font-medium text-slate-800"></select>
+          </div>
+
+          <div class="lg:col-span-6 flex flex-wrap items-center gap-2 no-print">
+            <button id="brinell-btn-run" type="button" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-white bg-[#1E3A8A] hover:bg-[#172554] shadow-sm transition disabled:opacity-50 disabled:cursor-not-allowed">
+              <svg class="w-4 h-4" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/>
+              </svg>
+              Aplicar Carga (3000 kgf)
+            </button>
+
+            <button id="brinell-btn-reset" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition">
+              <svg class="w-3.5 h-3.5" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+              Reiniciar Probeta
+            </button>
+
+            <button type="button" class="btn-lab-sound-toggle inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium bg-amber-50 text-[#B45309] border border-amber-200 hover:bg-amber-100 transition ml-auto">
+              <span class="js-sound-icon">🔊</span>
+              <span class="js-sound-label">Sonido: Activado</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick contrast presets -->
+        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 text-xs no-print">
+          <span class="text-slate-500 font-medium">Ejemplos rápidos:</span>
+          <div id="brinell-presets" class="flex flex-wrap gap-1.5"></div>
+          <span id="brinell-status-pill" class="ml-auto inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono-num font-semibold bg-slate-100 text-slate-600">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Probeta lista
+          </span>
+        </div>
+      </div>
+
+      <!-- Dual Canvas Simulator: Hydraulic Press + Optical Microscope -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <div class="sci-card p-5 lg:col-span-7 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h3 class="text-sm font-bold text-slate-900">Prensa Hidráulica Brinell — Corte Transversal</h3>
+              <p class="text-xs text-slate-500">Indentador esférico de carburo de tungsteno (<span class="font-mono-num">D = 10 mm</span>)</p>
+            </div>
+            <span id="brinell-load-readout" class="font-mono-num text-xs font-bold px-2.5 py-1 rounded-md bg-blue-50 text-[#1E3A8A] border border-blue-200">
+              0 kgf
+            </span>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 flex-1 flex items-center justify-center">
+            <canvas id="canvas-brinell-press" class="lab-canvas w-full block" style="max-height: 360px;"></canvas>
+          </div>
+        </div>
+
+        <div class="sci-card p-5 lg:col-span-5 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h3 class="text-sm font-bold text-slate-900">Visor de Microscopio Óptico</h3>
+              <p class="text-xs text-slate-500">Retícula milimétrica para medición directa del diámetro <span class="font-mono-num">d</span></p>
+            </div>
+            <span id="brinell-scope-badge" class="font-mono-num text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600">
+              10× · 1 mm/div
+            </span>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-900 flex-1 flex items-center justify-center">
+            <canvas id="canvas-brinell-microscope" class="lab-canvas w-full block" style="max-height: 360px;"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Numeric Results & Metallurgical Interpretation -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="sci-card p-4 border-l-4 border-l-[#1E3A8A]">
+          <p class="text-xs font-medium text-slate-500">Dureza del Catálogo (HB)</p>
+          <p id="brinell-val-hb" class="text-2xl font-bold font-mono-num text-[#1E3A8A] mt-1">—</p>
+          <p id="brinell-val-grade" class="text-[11px] text-slate-500 mt-1 truncate">—</p>
+        </div>
+        <div class="sci-card p-4 border-l-4 border-l-[#D97706]">
+          <p class="text-xs font-medium text-slate-500">Diámetro de Huella (d)</p>
+          <p id="brinell-val-d" class="text-2xl font-bold font-mono-num text-[#D97706] mt-1">—</p>
+          <p class="text-[11px] font-mono-num text-slate-400 mt-1">d = &radic;[D² − (D − 2P/&pi;D·HB)²]</p>
+        </div>
+        <div class="sci-card p-4 border-l-4 border-l-sky-700">
+          <p class="text-xs font-medium text-slate-500">Profundidad de Huella (h)</p>
+          <p id="brinell-val-h" class="text-2xl font-bold font-mono-num text-sky-900 mt-1">—</p>
+          <p class="text-[11px] font-mono-num text-slate-400 mt-1">h = (D − &radic;(D² − d²)) / 2</p>
+        </div>
+        <div class="sci-card p-4 border-l-4 border-l-slate-700">
+          <p class="text-xs font-medium text-slate-500">Relación de Indentación (d / D)</p>
+          <p id="brinell-val-ratio" class="text-2xl font-bold font-mono-num text-slate-800 mt-1">—</p>
+          <p id="brinell-val-astm" class="text-[11px] text-slate-500 mt-1">Rango óptimo ASTM E10: 0.24–0.60</p>
+        </div>
+      </div>
+
+      <div id="brinell-interp-card" class="sci-card p-5 border-l-4 border-l-[#1E3A8A] bg-white">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+          <h4 class="text-sm font-bold text-slate-900">Interpretación Metalúrgica de la Dureza Medida</h4>
+          <span id="brinell-tier-badge" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">—</span>
+        </div>
+        <p id="brinell-interp-text" class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          Selecciona un acero y aplica la carga de 3000 kgf para medir la huella e interpretar su comportamiento frente al mecanizado y desgaste.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- PESTAÑA 7: PÉNDULO DE IMPACTO CHARPY                       -->
+    <!-- ========================================================== -->
+    <section id="panel-tab7" class="tab-panel space-y-6">
+      <div>
+        <span class="text-[11px] font-semibold uppercase tracking-wider text-[#D97706]">Sección 07 — Laboratorio Virtual</span>
+        <h2 class="text-xl font-bold text-slate-900">Péndulo de Impacto Charpy (Probeta con Muesca en V)</h2>
+        <p class="text-sm text-slate-600 mt-0.5">Evaluación dinámica de tenacidad al impacto desde un ángulo inicial de <span class="font-mono-num">140°</span>, diferenciando fractura frágil frente a deformación plástica dúctil.</p>
+      </div>
+
+      <!-- Guía rápida de 3 pasos -->
+      <div class="sci-card p-4 sm:p-5 bg-white border-t-4 border-t-[#1E3A8A]">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-blue-50 text-[#1E3A8A] text-xs font-bold">
+            <svg class="w-3.5 h-3.5" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </span>
+          <h3 class="text-sm font-bold text-slate-900">Guía rápida del ensayo de impacto Charpy</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-700">
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#1E3A8A] text-white font-mono-num font-semibold text-[11px]">Paso 1</span>
+            <p class="leading-relaxed">Elige un <strong>acero SAE</strong> y su <strong>condición térmica</strong> para evaluar su tenacidad al impacto.</p>
+          </div>
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#1E3A8A] text-white font-mono-num font-semibold text-[11px]">Paso 2</span>
+            <p class="leading-relaxed">Haz clic en <strong>"Soltar Martillo Pendular"</strong> para liberar el péndulo desde <span class="font-mono-num">140°</span> sobre la probeta con muesca en V.</p>
+          </div>
+          <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+            <span class="flex-shrink-0 px-2 py-0.5 rounded-md bg-[#D97706] text-white font-mono-num font-semibold text-[11px]">Paso 3</span>
+            <p class="leading-relaxed">Analiza si ocurre <strong>fractura frágil</strong> o <strong>deformación dúctil</strong> según su Índice de Tenacidad (<strong>I<sub>T</sub></strong>) y elongación real.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles Charpy -->
+      <div class="sci-card p-5 space-y-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-end">
+          <div class="lg:col-span-6 space-y-1.5">
+            <label for="charpy-select" class="block text-xs font-semibold text-slate-700">Probeta con Muesca en V (Catálogo SAE Auditado)</label>
+            <select id="charpy-select" class="w-full px-3 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A] font-medium text-slate-800"></select>
+          </div>
+
+          <div class="lg:col-span-6 flex flex-wrap items-center gap-2 no-print">
+            <button id="charpy-btn-run" type="button" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-white bg-[#1E3A8A] hover:bg-[#172554] shadow-sm transition disabled:opacity-50 disabled:cursor-not-allowed">
+              <svg class="w-4 h-4" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Soltar Martillo Pendular
+            </button>
+
+            <button id="charpy-btn-reset" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition">
+              <svg class="w-3.5 h-3.5" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+              Reiniciar Ensayo
+            </button>
+
+            <button type="button" class="btn-lab-sound-toggle inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium bg-amber-50 text-[#B45309] border border-amber-200 hover:bg-amber-100 transition ml-auto">
+              <span class="js-sound-icon">🔊</span>
+              <span class="js-sound-label">Sonido: Activado</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick contrast presets -->
+        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 text-xs no-print">
+          <span class="text-slate-500 font-medium">Ejemplos contrastantes:</span>
+          <div id="charpy-presets" class="flex flex-wrap gap-1.5"></div>
+          <span id="charpy-regime-pill" class="ml-auto inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-600">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Listo para impacto
+          </span>
+        </div>
+      </div>
+
+      <!-- Charpy Pendulum Canvas -->
+      <div class="sci-card p-5 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 class="text-sm font-bold text-slate-900">Torre de Impacto Charpy — Dinámica Pendular y Respuesta de Probeta</h3>
+            <p class="text-xs text-slate-500">Ángulo inicial <span class="font-mono-num">θ₀ = 140°</span> · La aguja ámbar marca el ángulo final alcanzado <span class="font-mono-num">θf</span> tras el impacto.</p>
+          </div>
+          <div id="charpy-live-angle" class="font-mono-num text-xs font-bold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200">
+            θ = 140.0°
+          </div>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-200 bg-[#F8FAFC]">
+          <canvas id="canvas-charpy" class="lab-canvas w-full block" style="max-height: 410px;"></canvas>
+        </div>
+
+        <!-- Dynamic Alert Banner (Brittle vs Ductile) -->
+        <div id="charpy-alert-box" class="hidden rounded-xl p-4 border flex items-start gap-3">
+          <div id="charpy-alert-icon" class="flex-shrink-0 mt-0.5 text-lg"></div>
+          <div>
+            <h4 id="charpy-alert-title" class="text-sm font-bold"></h4>
+            <p id="charpy-alert-desc" class="text-xs sm:text-sm mt-0.5 leading-relaxed"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Metric Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="sci-card p-4 border-l-4 border-l-[#1E3A8A]">
+          <p class="text-xs font-medium text-slate-500">Energía Estimada (I<sub>T</sub>)</p>
+          <p id="charpy-val-it" class="text-2xl font-bold font-mono-num text-[#1E3A8A] mt-1">—</p>
+          <p class="text-[11px] text-slate-500 mt-1">UTS &times; Elongación / 100</p>
+        </div>
+        <div class="sci-card p-4 border-l-4 border-l-[#D97706]">
+          <p class="text-xs font-medium text-slate-500">Elongación a la Fractura</p>
+          <p id="charpy-val-elong" class="text-2xl font-bold font-mono-num text-[#D97706] mt-1">—</p>
+          <p class="text-[11px] text-slate-500 mt-1">Umbral dúctil del ensayo: &ge; 15%</p>
+        </div>
+        <div class="sci-card p-4 border-l-4 border-l-emerald-600">
+          <p class="text-xs font-medium text-slate-500">Energía Absorbida por Probeta</p>
+          <p id="charpy-val-abs" class="text-2xl font-bold font-mono-num text-emerald-700 mt-1">—</p>
+          <p id="charpy-val-angles" class="text-[11px] font-mono-num text-slate-500 mt-1">θ₀ = 140° &rarr; θf = —</p>
+        </div>
+        <div class="sci-card p-4 border-l-4 border-l-slate-700">
+          <p class="text-xs font-medium text-slate-500">Acero Evaluado</p>
+          <p id="charpy-val-grade" class="text-lg font-bold font-mono-num text-slate-900 mt-1 truncate">—</p>
+          <p id="charpy-val-cond" class="text-[11px] text-slate-500 mt-1 truncate">—</p>
+        </div>
+      </div>
+
+      <!-- Microstructural Explanation -->
+      <div class="sci-card p-5 border-l-4 border-l-[#1E3A8A] bg-white">
+        <h4 class="text-sm font-bold text-slate-900 mb-1.5">Explicación Microestructural del Comportamiento al Impacto</h4>
+        <p id="charpy-micro-text" class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          Selecciona un acero SAE y suelta el martillo pendular para observar la respuesta mecánica de la probeta con muesca en V.
+        </p>
       </div>
     </section>
 
@@ -4703,6 +5019,7 @@
       sortKey: 'grado',
       sortAsc: true,
       showAllCandidates: false,
+      soundEnabled: true,
     };
 
     // ============================================================
@@ -4789,14 +5106,16 @@
 
       // Print / Save PDF button
       document.getElementById('btn-print-pdf').addEventListener('click', () => {
-        // Ensure all tabs have rendered their Plotly charts before printing
-        ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'].forEach(t => ensureTabRendered(t));
+        // Ensure all 7 tabs have rendered their Plotly charts and Lab canvases before printing
+        ['tab1', 'tab2', 'tab3', 'tab4', 'tab5', 'tab6', 'tab7'].forEach(t => ensureTabRendered(t));
         setTimeout(() => {
           document.querySelectorAll('.js-plotly-plot').forEach(p => {
             try { Plotly.Plots.resize(p); } catch (_) {}
           });
+          if (typeof drawBrinellScene === 'function') drawBrinellScene();
+          if (typeof drawCharpyScene === 'function') drawCharpyScene();
           window.print();
-        }, 250);
+        }, 280);
       });
     }
 
@@ -5651,6 +5970,1514 @@
     }
 
     // ============================================================
+    // SHARED LAB AUDIO SYNTHESIZER (WEB AUDIO API, ZERO ASSETS)
+    // ============================================================
+    const LabAudio = (() => {
+      let ctx = null;
+      function getCtx() {
+        if (!state.soundEnabled) return null;
+        try {
+          if (!ctx) {
+            const AC = window.AudioContext || window.webkitAudioContext;
+            if (!AC) return null;
+            ctx = new AC();
+          }
+          if (ctx.state === 'suspended') ctx.resume();
+          return ctx;
+        } catch (_) {
+          return null;
+        }
+      }
+
+      function createNoiseBuffer(audioCtx, durationSec) {
+        const len = Math.max(1, Math.floor(audioCtx.sampleRate * durationSec));
+        const buf = audioCtx.createBuffer(1, len, audioCtx.sampleRate);
+        const data = buf.getChannelData(0);
+        for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+        return buf;
+      }
+
+      function playBrinellHydraulic(durationSec = 1.6) {
+        const c = getCtx();
+        if (!c) return;
+        try {
+          const now = c.currentTime;
+          const osc = c.createOscillator();
+          const sub = c.createOscillator();
+          const filter = c.createBiquadFilter();
+          const gain = c.createGain();
+
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(68, now);
+          osc.frequency.linearRampToValueAtTime(86, now + durationSec * 0.65);
+          osc.frequency.linearRampToValueAtTime(62, now + durationSec);
+
+          sub.type = 'triangle';
+          sub.frequency.setValueAtTime(34, now);
+          sub.frequency.linearRampToValueAtTime(43, now + durationSec * 0.65);
+
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(210, now);
+
+          gain.gain.setValueAtTime(0.0001, now);
+          gain.gain.linearRampToValueAtTime(0.055, now + 0.16);
+          gain.gain.setValueAtTime(0.05, now + durationSec * 0.72);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + durationSec);
+
+          osc.connect(filter);
+          sub.connect(filter);
+          filter.connect(gain);
+          gain.connect(c.destination);
+
+          osc.start(now);
+          sub.start(now);
+          osc.stop(now + durationSec + 0.03);
+          sub.stop(now + durationSec + 0.03);
+        } catch (_) {}
+      }
+
+      function playBrinellImpact(hb) {
+        const c = getCtx();
+        if (!c) return;
+        try {
+          const now = c.currentTime;
+          const t = Math.max(0, Math.min(1, (hb - 86) / (375 - 86)));
+          const f0 = 220 + t * (780 - 220);
+
+          const osc1 = c.createOscillator();
+          const osc2 = c.createOscillator();
+          const gain1 = c.createGain();
+          const gain2 = c.createGain();
+
+          osc1.type = 'sine';
+          osc1.frequency.setValueAtTime(f0, now);
+          osc1.frequency.exponentialRampToValueAtTime(f0 * 0.96, now + 0.24);
+
+          osc2.type = 'triangle';
+          osc2.frequency.setValueAtTime(f0 * 2.41, now);
+
+          gain1.gain.setValueAtTime(0.001, now);
+          gain1.gain.linearRampToValueAtTime(0.22, now + 0.004);
+          gain1.gain.exponentialRampToValueAtTime(0.0001, now + 0.28);
+
+          gain2.gain.setValueAtTime(0.001, now);
+          gain2.gain.linearRampToValueAtTime(0.08, now + 0.003);
+          gain2.gain.exponentialRampToValueAtTime(0.0001, now + 0.14);
+
+          osc1.connect(gain1);
+          osc2.connect(gain2);
+          gain1.connect(c.destination);
+          gain2.connect(c.destination);
+
+          osc1.start(now);
+          osc2.start(now);
+          osc1.stop(now + 0.3);
+          osc2.stop(now + 0.16);
+        } catch (_) {}
+      }
+
+      function playCharpyWhoosh(durationSec = 0.65) {
+        const c = getCtx();
+        if (!c) return;
+        try {
+          const now = c.currentTime;
+          const src = c.createBufferSource();
+          src.buffer = createNoiseBuffer(c, durationSec);
+          const filter = c.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.Q.setValueAtTime(2.6, now);
+          filter.frequency.setValueAtTime(220, now);
+          filter.frequency.exponentialRampToValueAtTime(760, now + durationSec * 0.85);
+          filter.frequency.exponentialRampToValueAtTime(340, now + durationSec);
+
+          const gain = c.createGain();
+          gain.gain.setValueAtTime(0.0001, now);
+          gain.gain.linearRampToValueAtTime(0.08, now + durationSec * 0.55);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + durationSec);
+
+          src.connect(filter);
+          filter.connect(gain);
+          gain.connect(c.destination);
+          src.start(now);
+          src.stop(now + durationSec + 0.02);
+        } catch (_) {}
+      }
+
+      function playCharpyImpact(isBrittle) {
+        const c = getCtx();
+        if (!c) return;
+        try {
+          const now = c.currentTime;
+          if (isBrittle) {
+            // Sharp dry snap: filtered white noise + crisp high-pitched metallic crack
+            const src = c.createBufferSource();
+            src.buffer = createNoiseBuffer(c, 0.12);
+            const bp = c.createBiquadFilter();
+            bp.type = 'bandpass';
+            bp.frequency.setValueAtTime(2600, now);
+            bp.Q.setValueAtTime(1.2, now);
+            const nGain = c.createGain();
+            nGain.gain.setValueAtTime(0.32, now);
+            nGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.085);
+            src.connect(bp);
+            bp.connect(nGain);
+            nGain.connect(c.destination);
+            src.start(now);
+            src.stop(now + 0.1);
+
+            const osc = c.createOscillator();
+            const oGain = c.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(1850, now);
+            osc.frequency.exponentialRampToValueAtTime(920, now + 0.06);
+            oGain.gain.setValueAtTime(0.24, now);
+            oGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.075);
+            osc.connect(oGain);
+            oGain.connect(c.destination);
+            osc.start(now);
+            osc.stop(now + 0.09);
+
+            // Secondary micro-snap of separated halves
+            const osc2 = c.createOscillator();
+            const g2 = c.createGain();
+            osc2.type = 'sine';
+            osc2.frequency.setValueAtTime(2400, now + 0.022);
+            g2.gain.setValueAtTime(0.11, now + 0.022);
+            g2.gain.exponentialRampToValueAtTime(0.0001, now + 0.08);
+            osc2.connect(g2);
+            g2.connect(c.destination);
+            osc2.start(now + 0.022);
+            osc2.stop(now + 0.09);
+          } else {
+            // Heavy damped ductile thud (110 Hz)
+            const osc = c.createOscillator();
+            const gain = c.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(110, now);
+            osc.frequency.exponentialRampToValueAtTime(58, now + 0.24);
+            gain.gain.setValueAtTime(0.001, now);
+            gain.gain.linearRampToValueAtTime(0.34, now + 0.006);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.28);
+            osc.connect(gain);
+            gain.connect(c.destination);
+            osc.start(now);
+            osc.stop(now + 0.3);
+
+            const src = c.createBufferSource();
+            src.buffer = createNoiseBuffer(c, 0.16);
+            const lp = c.createBiquadFilter();
+            lp.type = 'lowpass';
+            lp.frequency.setValueAtTime(340, now);
+            const nGain = c.createGain();
+            nGain.gain.setValueAtTime(0.18, now);
+            nGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.14);
+            src.connect(lp);
+            lp.connect(nGain);
+            nGain.connect(c.destination);
+            src.start(now);
+            src.stop(now + 0.16);
+          }
+        } catch (_) {}
+      }
+
+      return { playBrinellHydraulic, playBrinellImpact, playCharpyWhoosh, playCharpyImpact };
+    })();
+
+    function syncSoundToggleButtons() {
+      document.querySelectorAll('.btn-lab-sound-toggle').forEach(btn => {
+        const icon = btn.querySelector('.js-sound-icon');
+        const label = btn.querySelector('.js-sound-label');
+        if (state.soundEnabled) {
+          icon.textContent = '🔊';
+          label.textContent = 'Sonido: Activado';
+          btn.className = 'btn-lab-sound-toggle inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium bg-amber-50 text-[#B45309] border border-amber-200 hover:bg-amber-100 transition ml-auto';
+        } else {
+          icon.textContent = '🔇';
+          label.textContent = 'Sonido: Silenciado';
+          btn.className = 'btn-lab-sound-toggle inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium bg-slate-100 text-slate-500 border border-slate-300 hover:bg-slate-200 transition ml-auto';
+        }
+      });
+    }
+
+    function bindLabSoundTogglesOnce() {
+      document.querySelectorAll('.btn-lab-sound-toggle').forEach(btn => {
+        if (btn.dataset.boundSound) return;
+        btn.dataset.boundSound = '1';
+        btn.addEventListener('click', () => {
+          state.soundEnabled = !state.soundEnabled;
+          syncSoundToggleButtons();
+        });
+      });
+      syncSoundToggleButtons();
+    }
+
+    if (typeof CanvasRenderingContext2D !== 'undefined' && !CanvasRenderingContext2D.prototype.roundRect) {
+      CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+        const rad = Math.min(r || 0, Math.abs(w) / 2, Math.abs(h) / 2);
+        this.moveTo(x + rad, y);
+        this.arcTo(x + w, y, x + w, y + h, rad);
+        this.arcTo(x + w, y + h, x, y + h, rad);
+        this.arcTo(x, y + h, x, y, rad);
+        this.arcTo(x, y, x + w, y, rad);
+        this.closePath();
+        return this;
+      };
+    }
+
+    function setupHiDPICanvas(canvas, logicalW, logicalH) {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const targetW = Math.round(logicalW * dpr);
+      const targetH = Math.round(logicalH * dpr);
+      if (canvas.width !== targetW || canvas.height !== targetH) {
+        canvas.width = targetW;
+        canvas.height = targetH;
+      }
+      const ctx = canvas.getContext('2d');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return ctx;
+    }
+
+    // ============================================================
+    // TAB 6: ENSAYO VIRTUAL BRINELL (HB)
+    // ============================================================
+    const brinellState = {
+      records: [],
+      selectedIdx: 0,
+      phase: 'idle', // idle | descend | indent | dwell | retract | done
+      animId: null,
+      startTime: 0,
+      pistonProgress: 0, // 0 top, 1 contact
+      indentFraction: 0, // 0..1 of real depth
+      loadKgf: 0,
+      hasImprint: false,
+      impactSoundPlayed: false,
+    };
+
+    function calcBrinellPhysics(hb) {
+      const D = 10.0;
+      const P = 3000.0;
+      const safeHb = Math.max(40, Number(hb) || 150);
+      const inner = D - (2 * P) / (Math.PI * D * safeHb);
+      const d = Math.sqrt(Math.max(0.01, D * D - inner * inner));
+      const h = (D - Math.sqrt(Math.max(0, D * D - d * d))) / 2;
+      const ratio = d / D;
+      return { D, P, hb: safeHb, d, h, ratio };
+    }
+
+    function updateBrinellCards(rec, showMeasured) {
+      const phys = calcBrinellPhysics(rec.dureza_hb);
+      document.getElementById('brinell-val-hb').textContent = `${phys.hb.toFixed(0)} HB`;
+      document.getElementById('brinell-val-grade').textContent = `SAE ${rec.grado} · ${shortCond(rec.condicion)}`;
+      document.getElementById('brinell-val-d').textContent = showMeasured ? `${phys.d.toFixed(3)} mm` : 'Pendiente';
+      document.getElementById('brinell-val-h').textContent = showMeasured ? `${phys.h.toFixed(3)} mm` : 'Pendiente';
+      document.getElementById('brinell-val-ratio').textContent = showMeasured ? phys.ratio.toFixed(3) : '—';
+
+      const astmEl = document.getElementById('brinell-val-astm');
+      if (showMeasured) {
+        astmEl.textContent = (phys.ratio >= 0.24 && phys.ratio <= 0.60)
+          ? 'Dentro del rango válido ASTM E10 (0.24–0.60)'
+          : 'En límite superior (acero muy blando para 3000 kgf)';
+      } else {
+        astmEl.textContent = 'Rango óptimo ASTM E10: 0.24–0.60';
+      }
+
+      const tierBadge = document.getElementById('brinell-tier-badge');
+      const interpText = document.getElementById('brinell-interp-text');
+      const interpCard = document.getElementById('brinell-interp-card');
+
+      let tier, badgeCls, borderCls, text;
+      if (phys.hb < 140) {
+        tier = 'Blando / Alta Maquinabilidad';
+        badgeCls = 'bg-emerald-50 text-emerald-700 border border-emerald-200';
+        borderCls = 'border-l-emerald-600';
+        text = `Con <strong>${phys.hb.toFixed(0)} HB</strong> (huella amplia de <strong class="font-mono-num">${phys.d.toFixed(2)} mm</strong> y profundidad <strong class="font-mono-num">${phys.h.toFixed(2)} mm</strong>), <strong>SAE ${escapeHtml(rec.grado)}</strong> (${escapeHtml(rec.condicion)}, ${rec.c_pct}% C) exhibe una matriz predominantemente ferrítica de baja resistencia a la penetración. Es ideal para conformado en frío, embutición y mecanizado de alta velocidad, pero presenta limitada resistencia al desgaste abrasivo.`;
+      } else if (phys.hb <= 230) {
+        tier = 'Dureza Media / Uso Estructural';
+        badgeCls = 'bg-blue-50 text-[#1E3A8A] border border-blue-200';
+        borderCls = 'border-l-[#1E3A8A]';
+        text = `Con <strong>${phys.hb.toFixed(0)} HB</strong> (huella de <strong class="font-mono-num">${phys.d.toFixed(2)} mm</strong> y profundidad <strong class="font-mono-num">${phys.h.toFixed(2)} mm</strong>), <strong>SAE ${escapeHtml(rec.grado)}</strong> (${escapeHtml(rec.condicion)}, ${rec.c_pct}% C) ofrece un balance clásico entre resistencia mecánica (UTS = ${rec.uts} MPa) y maquinabilidad industrial. Su proporción ferrita–perlita o endurecimiento por acritud lo hace apto para ejes, pernos y componentes estructurales generales.`;
+      } else {
+        tier = 'Alta Dureza / Resistencia al Desgaste';
+        badgeCls = 'bg-amber-50 text-[#B45309] border border-amber-200';
+        borderCls = 'border-l-[#D97706]';
+        text = `Con <strong>${phys.hb.toFixed(0)} HB</strong> (huella compacta de <strong class="font-mono-num">${phys.d.toFixed(2)} mm</strong> y apenas <strong class="font-mono-num">${phys.h.toFixed(2)} mm</strong> de penetración), <strong>SAE ${escapeHtml(rec.grado)}</strong> (${escapeHtml(rec.condicion)}, ${rec.c_pct}% C) resiste fuertemente la deformación plástica localizada gracias a perlita fina, aleantes (Cr/Mo/Ni) o martensita revenida. Excelente para engranajes, levas y superficies sometidas a contacto y desgaste, requiriendo herramientas de corte más rígidas.`;
+      }
+
+      tierBadge.textContent = tier;
+      tierBadge.className = `text-xs font-semibold px-2.5 py-0.5 rounded-full ${badgeCls}`;
+      interpCard.className = `sci-card p-5 border-l-4 ${borderCls} bg-white`;
+      interpText.innerHTML = showMeasured
+        ? text
+        : `Probeta cargada: <strong>SAE ${escapeHtml(rec.grado)}</strong> (${escapeHtml(rec.condicion)}, <span class="font-mono-num">${phys.hb.toFixed(0)} HB</span>). Presiona <strong>"Aplicar Carga (3000 kgf)"</strong> para ejecutar la indentación y medir el diámetro de huella en el microscopio.`;
+    }
+
+    function setBrinellStatus(label, dotColor) {
+      const el = document.getElementById('brinell-status-pill');
+      if (!el) return;
+      el.innerHTML = `<span class="w-2 h-2 rounded-full ${dotColor}"></span> ${label}`;
+    }
+
+    function drawBrinellPressCanvas() {
+      const canvas = document.getElementById('canvas-brinell-press');
+      if (!canvas) return;
+      const W = 540, H = 340;
+      const ctx = setupHiDPICanvas(canvas, W, H);
+      const rec = brinellState.records[brinellState.selectedIdx];
+      if (!rec) return;
+      const phys = calcBrinellPhysics(rec.dureza_hb);
+
+      // Background
+      ctx.fillStyle = '#F8FAFC';
+      ctx.fillRect(0, 0, W, H);
+
+      // Subtle technical grid
+      ctx.strokeStyle = '#E2E8F0';
+      ctx.lineWidth = 0.7;
+      for (let x = 20; x < W; x += 30) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+      }
+      for (let y = 20; y < H; y += 30) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+      }
+
+      const cx = 250;
+      const specTopY = 232;
+      const specH = 56;
+      const specW = 240;
+
+      // Press columns & frame
+      ctx.fillStyle = '#CBD5E1';
+      ctx.strokeStyle = '#64748B';
+      ctx.lineWidth = 1.5;
+      ctx.fillRect(68, 22, 22, 286);
+      ctx.strokeRect(68, 22, 22, 286);
+      ctx.fillRect(410, 22, 22, 286);
+      ctx.strokeRect(410, 22, 22, 286);
+
+      // Top crosshead
+      const headGrad = ctx.createLinearGradient(0, 14, 0, 56);
+      headGrad.addColorStop(0, '#334155');
+      headGrad.addColorStop(1, '#1E293B');
+      ctx.fillStyle = headGrad;
+      ctx.fillRect(54, 14, 392, 40);
+      ctx.fillStyle = '#94A3B8';
+      ctx.font = '600 10px "JetBrains Mono", monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('PRENSA HIDRÁULICA BRINELL · ASTM E10 (3000 kgf)', cx, 38);
+
+      // Anvil / Base plate
+      ctx.fillStyle = '#475569';
+      ctx.fillRect(54, specTopY + specH, 392, 24);
+      ctx.fillStyle = '#334155';
+      ctx.fillRect(cx - 132, specTopY + specH - 4, 264, 8);
+
+      // Hydraulic cylinder housing
+      const cylGrad = ctx.createLinearGradient(cx - 42, 0, cx + 42, 0);
+      cylGrad.addColorStop(0, '#1E3A8A');
+      cylGrad.addColorStop(0.5, '#2563EB');
+      cylGrad.addColorStop(1, '#172554');
+      ctx.fillStyle = cylGrad;
+      ctx.fillRect(cx - 42, 54, 84, 54);
+      ctx.strokeStyle = '#1E293B';
+      ctx.strokeRect(cx - 42, 54, 84, 54);
+
+      // Indenter geometry (scaled cleanly for visual clarity)
+      const ballR = 30; // represents 5 mm radius (D = 10 mm => 6 px/mm)
+      const pxPerMm = ballR / 5.0; // 6 px per mm
+      // Magnify depth slightly (3.6x) so 0.25mm vs 1.11mm crater is unmistakably visible
+      const maxVisualDepth = Math.min(24, phys.h * pxPerMm * 3.4);
+      const currentCraterDepth = (brinellState.hasImprint || brinellState.indentFraction > 0)
+        ? maxVisualDepth * (brinellState.hasImprint ? 1 : brinellState.indentFraction)
+        : 0;
+      const craterHalfW = (phys.d / 2) * pxPerMm * (brinellState.hasImprint ? 1 : Math.sqrt(Math.max(0, brinellState.indentFraction)));
+
+      // Piston Y position
+      const restBottomY = 170;
+      const contactBottomY = specTopY;
+      const ballBottomY = restBottomY + (contactBottomY - restBottomY) * brinellState.pistonProgress + maxVisualDepth * brinellState.indentFraction;
+      const ballCenterY = ballBottomY - ballR;
+
+      // Piston rod
+      const rodGrad = ctx.createLinearGradient(cx - 14, 0, cx + 14, 0);
+      rodGrad.addColorStop(0, '#94A3B8');
+      rodGrad.addColorStop(0.45, '#F1F5F9');
+      rodGrad.addColorStop(1, '#64748B');
+      ctx.fillStyle = rodGrad;
+      ctx.fillRect(cx - 14, 108, 28, Math.max(12, ballCenterY - 12 - 108));
+      ctx.strokeStyle = '#475569';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(cx - 14, 108, 28, Math.max(12, ballCenterY - 12 - 108));
+
+      // Indenter collar
+      ctx.fillStyle = '#334155';
+      ctx.fillRect(cx - 22, ballCenterY - 24, 44, 16);
+
+      // Steel Specimen Plate (with deformed crater profile!)
+      const specLeft = cx - specW / 2;
+      const specRight = cx + specW / 2;
+      const specGrad = ctx.createLinearGradient(0, specTopY, 0, specTopY + specH);
+      specGrad.addColorStop(0, '#E2E8F0');
+      specGrad.addColorStop(0.25, '#CBD5E1');
+      specGrad.addColorStop(1, '#94A3B8');
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(specLeft, specTopY);
+      if (currentCraterDepth > 0.3 && craterHalfW > 1) {
+        const pileUp = Math.min(3.5, currentCraterDepth * 0.16);
+        ctx.lineTo(cx - craterHalfW - 10, specTopY);
+        ctx.quadraticCurveTo(cx - craterHalfW - 3, specTopY - pileUp, cx - craterHalfW, specTopY);
+        ctx.quadraticCurveTo(cx, specTopY + currentCraterDepth * 1.9, cx + craterHalfW, specTopY);
+        ctx.quadraticCurveTo(cx + craterHalfW + 3, specTopY - pileUp, cx + craterHalfW + 10, specTopY);
+      }
+      ctx.lineTo(specRight, specTopY);
+      ctx.lineTo(specRight, specTopY + specH);
+      ctx.lineTo(specLeft, specTopY + specH);
+      ctx.closePath();
+      ctx.fillStyle = specGrad;
+      ctx.fill();
+      ctx.strokeStyle = '#334155';
+      ctx.lineWidth = 1.6;
+      ctx.stroke();
+
+      // Subtle specimen label
+      ctx.fillStyle = '#1E293B';
+      ctx.font = '600 11px "JetBrains Mono", monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText(`SAE ${rec.grado} · ${phys.hb.toFixed(0)} HB`, cx, specTopY + specH - 12);
+      ctx.restore();
+
+      // Tungsten Carbide Ball (D = 10 mm)
+      ctx.save();
+      const ballGrad = ctx.createRadialGradient(cx - 9, ballCenterY - 9, 4, cx, ballCenterY, ballR);
+      ballGrad.addColorStop(0, '#94A3B8');
+      ballGrad.addColorStop(0.45, '#334155');
+      ballGrad.addColorStop(1, '#0F172A');
+      ctx.beginPath();
+      ctx.arc(cx, ballCenterY, ballR, 0, Math.PI * 2);
+      ctx.fillStyle = ballGrad;
+      ctx.fill();
+      ctx.strokeStyle = '#0F172A';
+      ctx.lineWidth = 1.4;
+      ctx.stroke();
+
+      // Subtle WC label on ball
+      ctx.fillStyle = 'rgba(255,255,255,0.85)';
+      ctx.font = '600 8.5px "JetBrains Mono", monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('WC 10mm', cx, ballCenterY + 3);
+      ctx.restore();
+
+      // Load Force Vector Arrows during active load
+      if (brinellState.loadKgf > 100) {
+        const alpha = Math.min(1, brinellState.loadKgf / 2500);
+        ctx.save();
+        ctx.strokeStyle = `rgba(217, 119, 6, ${alpha})`;
+        ctx.fillStyle = `rgba(217, 119, 6, ${alpha})`;
+        ctx.lineWidth = 2.6;
+        // Down arrow
+        const ay1 = 114, ay2 = Math.min(156, ballCenterY - 30);
+        if (ay2 > ay1 + 10) {
+          ctx.beginPath();
+          ctx.moveTo(cx + 34, ay1);
+          ctx.lineTo(cx + 34, ay2);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(cx + 28, ay2 - 6);
+          ctx.lineTo(cx + 34, ay2 + 3);
+          ctx.lineTo(cx + 40, ay2 - 6);
+          ctx.fill();
+          ctx.font = '700 10px "JetBrains Mono", monospace';
+          ctx.textAlign = 'left';
+          ctx.fillText(`P = ${Math.round(brinellState.loadKgf)} kgf`, cx + 44, (ay1 + ay2) / 2 + 4);
+        }
+        ctx.restore();
+      }
+
+      // Dimension annotations after retraction
+      if (brinellState.hasImprint && brinellState.phase === 'done') {
+        ctx.save();
+        ctx.strokeStyle = '#D97706';
+        ctx.fillStyle = '#B45309';
+        ctx.lineWidth = 1.3;
+        // Diameter bracket above crater
+        const dimY = specTopY - 14;
+        ctx.beginPath();
+        ctx.moveTo(cx - craterHalfW, dimY);
+        ctx.lineTo(cx + craterHalfW, dimY);
+        ctx.moveTo(cx - craterHalfW, dimY - 4);
+        ctx.lineTo(cx - craterHalfW, specTopY - 1);
+        ctx.moveTo(cx + craterHalfW, dimY - 4);
+        ctx.lineTo(cx + craterHalfW, specTopY - 1);
+        ctx.stroke();
+        ctx.font = '700 10px "JetBrains Mono", monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText(`d = ${phys.d.toFixed(2)} mm`, cx, dimY - 5);
+
+        // Depth indicator on right
+        ctx.fillStyle = '#1E3A8A';
+        ctx.textAlign = 'left';
+        ctx.fillText(`h = ${phys.h.toFixed(3)} mm`, cx + craterHalfW + 16, specTopY + 14);
+        ctx.restore();
+      }
+
+      // Vertical Load Gauge Bar on right side of frame
+      const gx = 456, gy = 74, gw = 20, gh = 190;
+      ctx.fillStyle = '#E2E8F0';
+      ctx.fillRect(gx, gy, gw, gh);
+      const loadFrac = Math.max(0, Math.min(1, brinellState.loadKgf / 3000));
+      const fillH = gh * loadFrac;
+      const gGrad = ctx.createLinearGradient(0, gy + gh, 0, gy);
+      gGrad.addColorStop(0, '#1E3A8A');
+      gGrad.addColorStop(0.7, '#2563EB');
+      gGrad.addColorStop(1, '#D97706');
+      ctx.fillStyle = gGrad;
+      ctx.fillRect(gx, gy + gh - fillH, gw, fillH);
+      ctx.strokeStyle = '#64748B';
+      ctx.lineWidth = 1.2;
+      ctx.strokeRect(gx, gy, gw, gh);
+
+      ctx.fillStyle = '#334155';
+      ctx.font = '600 9px "JetBrains Mono", monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('3000', gx + gw / 2, gy - 6);
+      ctx.fillText('kgf', gx + gw / 2, gy + gh + 13);
+      ctx.fillText(`${Math.round(brinellState.loadKgf)}`, gx + gw / 2, gy + gh + 25);
+    }
+
+    function drawBrinellMicroscopeCanvas() {
+      const canvas = document.getElementById('canvas-brinell-microscope');
+      if (!canvas) return;
+      const W = 380, H = 340;
+      const ctx = setupHiDPICanvas(canvas, W, H);
+      const rec = brinellState.records[brinellState.selectedIdx];
+      if (!rec) return;
+      const phys = calcBrinellPhysics(rec.dureza_hb);
+
+      // Dark optical housing
+      ctx.fillStyle = '#0F172A';
+      ctx.fillRect(0, 0, W, H);
+
+      const cx = W / 2;
+      const cy = H / 2 - 4;
+      const viewR = 132;
+      // Field of view covers 10 mm total diameter (-5 mm to +5 mm)
+      const pxPerMm = (viewR * 2) / 10.0; // 26.4 px per mm
+
+      // Clipped circular eyepiece
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(cx, cy, viewR, 0, Math.PI * 2);
+      ctx.clip();
+
+      // Polished steel surface illuminated under microscope
+      const surfGrad = ctx.createRadialGradient(cx - 25, cy - 25, 10, cx, cy, viewR);
+      surfGrad.addColorStop(0, '#F1F5F9');
+      surfGrad.addColorStop(0.7, '#CBD5E1');
+      surfGrad.addColorStop(1, '#94A3B8');
+      ctx.fillStyle = surfGrad;
+      ctx.fillRect(cx - viewR, cy - viewR, viewR * 2, viewR * 2);
+
+      // Fine brushed polish micro-lines
+      ctx.strokeStyle = 'rgba(100, 116, 139, 0.14)';
+      ctx.lineWidth = 0.8;
+      for (let y = cy - viewR; y <= cy + viewR; y += 5) {
+        ctx.beginPath();
+        ctx.moveTo(cx - viewR, y);
+        ctx.lineTo(cx + viewR, y + 6);
+        ctx.stroke();
+      }
+
+      // Draw Indentation Footprint (exact diameter d in mm!)
+      const showCircle = brinellState.hasImprint || brinellState.indentFraction > 0.05;
+      if (showCircle) {
+        const scaleFrac = brinellState.hasImprint ? 1 : Math.sqrt(brinellState.indentFraction);
+        const rPx = (phys.d / 2) * pxPerMm * scaleFrac;
+
+        // Subtle deformed halo / pile-up ring
+        ctx.beginPath();
+        ctx.arc(cx, cy, rPx + 4, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.55)';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        // Concave crater shading
+        const craterGrad = ctx.createRadialGradient(cx + rPx * 0.28, cy + rPx * 0.28, rPx * 0.1, cx, cy, rPx);
+        craterGrad.addColorStop(0, '#64748B');
+        craterGrad.addColorStop(0.6, '#334155');
+        craterGrad.addColorStop(1, '#0F172A');
+        ctx.beginPath();
+        ctx.arc(cx, cy, rPx, 0, Math.PI * 2);
+        ctx.fillStyle = craterGrad;
+        ctx.fill();
+
+        // Rim contour
+        ctx.strokeStyle = '#0F172A';
+        ctx.lineWidth = 1.6;
+        ctx.stroke();
+
+        // Measurement calipers when completed
+        if (brinellState.hasImprint && brinellState.phase === 'done') {
+          ctx.strokeStyle = '#D97706';
+          ctx.lineWidth = 1.6;
+          ctx.setLineDash([4, 3]);
+          ctx.beginPath();
+          ctx.moveTo(cx - rPx, cy - viewR);
+          ctx.lineTo(cx - rPx, cy + viewR);
+          ctx.moveTo(cx + rPx, cy - viewR);
+          ctx.lineTo(cx + rPx, cy + viewR);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          // Double arrow dimension line
+          const dy = cy + rPx + 20;
+          const clampedDy = Math.min(cy + viewR - 18, dy);
+          ctx.strokeStyle = '#D97706';
+          ctx.fillStyle = '#D97706';
+          ctx.lineWidth = 1.8;
+          ctx.beginPath();
+          ctx.moveTo(cx - rPx, clampedDy);
+          ctx.lineTo(cx + rPx, clampedDy);
+          ctx.stroke();
+          // Arrow heads
+          ctx.beginPath();
+          ctx.moveTo(cx - rPx, clampedDy); ctx.lineTo(cx - rPx + 6, clampedDy - 3.5); ctx.lineTo(cx - rPx + 6, clampedDy + 3.5); ctx.fill();
+          ctx.beginPath();
+          ctx.moveTo(cx + rPx, clampedDy); ctx.lineTo(cx + rPx - 6, clampedDy - 3.5); ctx.lineTo(cx + rPx - 6, clampedDy + 3.5); ctx.fill();
+        }
+      }
+
+      // Optical Reticule Crosshair & Millimeter Scale (-4 mm to +4 mm)
+      ctx.strokeStyle = 'rgba(30, 58, 138, 0.65)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(cx - viewR, cy); ctx.lineTo(cx + viewR, cy);
+      ctx.moveTo(cx, cy - viewR); ctx.lineTo(cx, cy + viewR);
+      ctx.stroke();
+
+      // Millimeter ticks along horizontal and vertical axes
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.8)';
+      ctx.font = '600 8.5px "JetBrains Mono", monospace';
+      ctx.textAlign = 'center';
+      for (let mm = -4.5; mm <= 4.5; mm += 0.5) {
+        const isInt = Math.abs(mm - Math.round(mm)) < 0.01;
+        const tickLen = isInt ? 7 : 3.5;
+        const tx = cx + mm * pxPerMm;
+        const ty = cy + mm * pxPerMm;
+        ctx.beginPath();
+        ctx.moveTo(tx, cy - tickLen); ctx.lineTo(tx, cy + tickLen);
+        ctx.moveTo(cx - tickLen, ty); ctx.lineTo(cx + tickLen, ty);
+        ctx.stroke();
+        if (isInt && mm !== 0 && Math.abs(mm) <= 4) {
+          ctx.fillText(`${Math.abs(mm)}`, tx, cy - 10);
+        }
+      }
+
+      // Concentric reference rings (2, 4, 6 mm diameter)
+      ctx.strokeStyle = 'rgba(30, 58, 138, 0.22)';
+      ctx.lineWidth = 0.8;
+      [2, 4, 6].forEach(diam => {
+        ctx.beginPath();
+        ctx.arc(cx, cy, (diam / 2) * pxPerMm, 0, Math.PI * 2);
+        ctx.stroke();
+      });
+
+      ctx.restore();
+
+      // Eyepiece outer bezel ring
+      ctx.beginPath();
+      ctx.arc(cx, cy, viewR, 0, Math.PI * 2);
+      ctx.strokeStyle = '#475569';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+
+      // Bottom readout bar inside microscope frame
+      ctx.fillStyle = '#E2E8F0';
+      ctx.font = '600 11px "JetBrains Mono", monospace';
+      ctx.textAlign = 'center';
+      if (brinellState.hasImprint && brinellState.phase === 'done') {
+        ctx.fillStyle = '#FBBF24';
+        ctx.fillText(`Huella medida: d = ${phys.d.toFixed(3)} mm  |  ${phys.hb.toFixed(0)} HB`, cx, H - 14);
+      } else if (brinellState.phase !== 'idle') {
+        ctx.fillStyle = '#93C5FD';
+        ctx.fillText('Indentando probeta...', cx, H - 14);
+      } else {
+        ctx.fillStyle = '#94A3B8';
+        ctx.fillText('Sin huella — Aplica carga para medir diámetro d', cx, H - 14);
+      }
+    }
+
+    function drawBrinellScene() {
+      drawBrinellPressCanvas();
+      drawBrinellMicroscopeCanvas();
+    }
+
+    function resetBrinell() {
+      if (brinellState.animId) cancelAnimationFrame(brinellState.animId);
+      brinellState.animId = null;
+      brinellState.phase = 'idle';
+      brinellState.pistonProgress = 0;
+      brinellState.indentFraction = 0;
+      brinellState.loadKgf = 0;
+      brinellState.hasImprint = false;
+      brinellState.impactSoundPlayed = false;
+
+      document.getElementById('brinell-btn-run').disabled = false;
+      document.getElementById('brinell-load-readout').textContent = '0 kgf';
+      setBrinellStatus('Probeta lista', 'bg-slate-400');
+
+      const rec = brinellState.records[brinellState.selectedIdx];
+      if (rec) updateBrinellCards(rec, false);
+      drawBrinellScene();
+    }
+
+    function runBrinellSimulation() {
+      const rec = brinellState.records[brinellState.selectedIdx];
+      if (!rec) return;
+      if (brinellState.animId) cancelAnimationFrame(brinellState.animId);
+
+      brinellState.phase = 'descend';
+      brinellState.startTime = performance.now();
+      brinellState.pistonProgress = 0;
+      brinellState.indentFraction = 0;
+      brinellState.loadKgf = 0;
+      brinellState.hasImprint = false;
+      brinellState.impactSoundPlayed = false;
+
+      document.getElementById('brinell-btn-run').disabled = true;
+      setBrinellStatus('Descendiendo pistón hidráulico...', 'bg-blue-500 animate-pulse');
+      LabAudio.playBrinellHydraulic(1.65);
+
+      const T_DESCEND = 850;
+      const T_INDENT = 750;
+      const T_DWELL = 550;
+      const T_RETRACT = 700;
+
+      function step(now) {
+        const dt = now - brinellState.startTime;
+
+        if (dt < T_DESCEND) {
+          const u = dt / T_DESCEND;
+          const ease = u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+          brinellState.phase = 'descend';
+          brinellState.pistonProgress = ease;
+          brinellState.indentFraction = 0;
+          brinellState.loadKgf = 0;
+        } else if (dt < T_DESCEND + T_INDENT) {
+          if (!brinellState.impactSoundPlayed) {
+            brinellState.impactSoundPlayed = true;
+            LabAudio.playBrinellImpact(rec.dureza_hb);
+            setBrinellStatus('Aplicando 3000 kgf...', 'bg-amber-500 animate-pulse');
+          }
+          const u = (dt - T_DESCEND) / T_INDENT;
+          const ease = 1 - Math.pow(1 - u, 3);
+          brinellState.phase = 'indent';
+          brinellState.pistonProgress = 1;
+          brinellState.indentFraction = ease;
+          brinellState.loadKgf = 3000 * ease;
+        } else if (dt < T_DESCEND + T_INDENT + T_DWELL) {
+          brinellState.phase = 'dwell';
+          brinellState.pistonProgress = 1;
+          brinellState.indentFraction = 1;
+          brinellState.loadKgf = 3000;
+          brinellState.hasImprint = true;
+          setBrinellStatus('Manteniendo carga (3000 kgf)', 'bg-amber-600');
+        } else if (dt < T_DESCEND + T_INDENT + T_DWELL + T_RETRACT) {
+          const u = (dt - T_DESCEND - T_INDENT - T_DWELL) / T_RETRACT;
+          const ease = 1 - Math.pow(1 - u, 2);
+          brinellState.phase = 'retract';
+          brinellState.hasImprint = true;
+          brinellState.loadKgf = Math.max(0, 3000 * (1 - u * 2.2));
+          brinellState.indentFraction = Math.max(0, 1 - ease * 1.4);
+          brinellState.pistonProgress = 1 - ease;
+          setBrinellStatus('Retirando indentador...', 'bg-blue-500');
+        } else {
+          brinellState.phase = 'done';
+          brinellState.pistonProgress = 0;
+          brinellState.indentFraction = 0;
+          brinellState.loadKgf = 0;
+          brinellState.hasImprint = true;
+          brinellState.animId = null;
+
+          document.getElementById('brinell-btn-run').disabled = false;
+          document.getElementById('brinell-load-readout').textContent = '0 kgf (Finalizado)';
+          setBrinellStatus('Huella medida en microscopio', 'bg-emerald-500');
+          updateBrinellCards(rec, true);
+          drawBrinellScene();
+          return;
+        }
+
+        document.getElementById('brinell-load-readout').textContent = `${Math.round(brinellState.loadKgf)} kgf`;
+        drawBrinellScene();
+        brinellState.animId = requestAnimationFrame(step);
+      }
+
+      brinellState.animId = requestAnimationFrame(step);
+    }
+
+    function renderTab6() {
+      bindLabSoundTogglesOnce();
+      const sel = document.getElementById('brinell-select');
+      if (!sel.dataset.bound) {
+        sel.dataset.bound = '1';
+        brinellState.records = DATA.registros.filter(r => r.dureza_hb !== null && r.dureza_hb !== undefined);
+
+        sel.innerHTML = brinellState.records.map((r, i) =>
+          `<option value="${i}">SAE ${escapeHtml(r.grado)} — ${escapeHtml(r.condicion)} (${Number(r.dureza_hb).toFixed(0)} HB · ${r.c_pct}% C)</option>`
+        ).join('');
+
+        // Default to SAE 1045 Hot rolled if available
+        const defIdx = brinellState.records.findIndex(r => r.grado === '1045' && r.condicion.includes('Hot rolled'));
+        brinellState.selectedIdx = defIdx >= 0 ? defIdx : 0;
+        sel.value = String(brinellState.selectedIdx);
+
+        // Build 3 quick contrast presets (softest, medium 1045, hardest)
+        const sortedByHb = [...brinellState.records.map((r, i) => ({ r, i }))].sort((a, b) => a.r.dureza_hb - b.r.dureza_hb);
+        const soft = sortedByHb[0];
+        const hard = sortedByHb[sortedByHb.length - 1];
+        const mid = { r: brinellState.records[brinellState.selectedIdx], i: brinellState.selectedIdx };
+        const presets = [
+          { label: `Blando: SAE ${soft.r.grado} (${soft.r.dureza_hb} HB)`, idx: soft.i },
+          { label: `Medio: SAE ${mid.r.grado} (${mid.r.dureza_hb} HB)`, idx: mid.i },
+          { label: `Muy duro: SAE ${hard.r.grado} (${hard.r.dureza_hb} HB)`, idx: hard.i },
+        ];
+        document.getElementById('brinell-presets').innerHTML = presets.map(p => `
+          <button type="button" data-b-idx="${p.idx}" class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-blue-50 hover:text-[#1E3A8A] border border-slate-200 text-[11px] font-medium text-slate-700 transition">
+            ${escapeHtml(p.label)}
+          </button>
+        `).join('');
+
+        document.querySelectorAll('#brinell-presets button').forEach(b => {
+          b.addEventListener('click', () => {
+            brinellState.selectedIdx = Number(b.dataset.bIdx);
+            sel.value = String(brinellState.selectedIdx);
+            resetBrinell();
+          });
+        });
+
+        sel.addEventListener('change', () => {
+          brinellState.selectedIdx = Number(sel.value);
+          resetBrinell();
+        });
+
+        document.getElementById('brinell-btn-run').addEventListener('click', runBrinellSimulation);
+        document.getElementById('brinell-btn-reset').addEventListener('click', resetBrinell);
+      }
+
+      resetBrinell();
+    }
+
+    // ============================================================
+    // TAB 7: PÉNDULO DE IMPACTO CHARPY
+    // ============================================================
+    const charpyState = {
+      records: [],
+      selectedIdx: 0,
+      phase: 'idle', // idle | falling | follow | done
+      animId: null,
+      startTime: 0,
+      angleDeg: -140, // -140 left release -> 0 bottom -> +thetaF right
+      peakAngleDeg: null,
+      impactTriggered: false,
+      isBrittle: false,
+      energyPct: 0,
+      targetFinalDeg: 90,
+      // Specimen kinematic state
+      bendAngle: 0,
+      leftHalf: { x: 0, y: 0, vx: 0, vy: 0, rot: 0, vrot: 0 },
+      rightHalf: { x: 0, y: 0, vx: 0, vy: 0, rot: 0, vrot: 0 },
+      lastFrameTime: 0,
+    };
+
+    function calcCharpyPhysics(rec) {
+      const it = Number(rec.indice_tenacidad) || 80;
+      const elong = Number(rec.elongacion) || 12;
+      const isBrittle = (elong < 15) || (it < 85);
+
+      // Map indice_tenacidad to absorbed energy fraction (%) cleanly
+      let energyPct = (it / 235) * 100;
+      if (isBrittle) {
+        energyPct = Math.min(36, Math.max(14, energyPct * 0.85));
+      } else {
+        energyPct = Math.min(90, Math.max(40, energyPct));
+      }
+
+      // Exact pendulum energy balance: (1 - cos thetaF) = (1 - cos 140°) * (1 - energyPct/100)
+      const cos140 = Math.cos((140 * Math.PI) / 180);
+      const h0Factor = 1 - cos140; // ~1.766
+      const hFFactor = h0Factor * (1 - energyPct / 100);
+      const cosThetaF = Math.max(-1, Math.min(1, 1 - hFFactor));
+      const thetaFDeg = (Math.acos(cosThetaF) * 180) / Math.PI;
+
+      return { it, elong, isBrittle, energyPct, thetaFDeg };
+    }
+
+    function updateCharpyInfoCards(rec, completed) {
+      const phys = calcCharpyPhysics(rec);
+      document.getElementById('charpy-val-it').textContent = `${phys.it.toFixed(1)} MJ/m³`;
+      document.getElementById('charpy-val-elong').textContent = `${phys.elong.toFixed(1)} %`;
+      document.getElementById('charpy-val-abs').textContent = completed ? `${phys.energyPct.toFixed(1)} %` : 'Pendiente';
+      document.getElementById('charpy-val-angles').textContent = completed
+        ? `θ₀ = 140° → θf = ${phys.thetaFDeg.toFixed(1)}°`
+        : 'θ₀ = 140° → θf = —';
+      document.getElementById('charpy-val-grade').textContent = `SAE ${rec.grado}`;
+      document.getElementById('charpy-val-cond').textContent = `${rec.condicion} (${rec.c_pct}% C)`;
+
+      const alertBox = document.getElementById('charpy-alert-box');
+      const alertIcon = document.getElementById('charpy-alert-icon');
+      const alertTitle = document.getElementById('charpy-alert-title');
+      const alertDesc = document.getElementById('charpy-alert-desc');
+      const regimePill = document.getElementById('charpy-regime-pill');
+
+      if (!completed) {
+        alertBox.classList.add('hidden');
+        regimePill.className = 'ml-auto inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-600';
+        regimePill.innerHTML = '<span class="w-2 h-2 rounded-full bg-slate-400"></span> Listo para impacto';
+      } else if (phys.isBrittle) {
+        alertBox.className = 'rounded-xl p-4 border bg-rose-50 border-rose-200 flex items-start gap-3';
+        alertIcon.textContent = '⚠️';
+        alertTitle.className = 'text-sm font-bold text-rose-900';
+        alertTitle.textContent = 'Fractura Frágil (Baja absorción de energía)';
+        alertDesc.className = 'text-xs sm:text-sm text-rose-800 mt-0.5 leading-relaxed';
+        alertDesc.innerHTML = `La probeta de <strong>SAE ${escapeHtml(rec.grado)}</strong> se fracturó limpiamente en dos mitades al recibir el impacto (<span class="font-mono-num">Elongación = ${phys.elong.toFixed(1)}%</span>, <span class="font-mono-num">I<sub>T</sub> = ${phys.it.toFixed(1)} MJ/m³</span>). El péndulo apenas perdió energía (<span class="font-mono-num">${phys.energyPct.toFixed(1)}%</span> absorbida) y ascendió hasta <strong class="font-mono-num">${phys.thetaFDeg.toFixed(1)}°</strong>.`;
+        regimePill.className = 'ml-auto inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-rose-50 text-rose-700 border border-rose-200';
+        regimePill.innerHTML = '<span class="w-2 h-2 rounded-full bg-rose-500"></span> Fractura Frágil';
+      } else {
+        alertBox.className = 'rounded-xl p-4 border bg-emerald-50 border-emerald-200 flex items-start gap-3';
+        alertIcon.textContent = '🛡️';
+        alertTitle.className = 'text-sm font-bold text-emerald-900';
+        alertTitle.textContent = 'Comportamiento Dúctil / Alta Tenacidad';
+        alertDesc.className = 'text-xs sm:text-sm text-emerald-800 mt-0.5 leading-relaxed';
+        alertDesc.innerHTML = `La probeta de <strong>SAE ${escapeHtml(rec.grado)}</strong> se dobló plásticamente en V sin fragmentarse (<span class="font-mono-num">Elongación = ${phys.elong.toFixed(1)}%</span>, <span class="font-mono-num">I<sub>T</sub> = ${phys.it.toFixed(1)} MJ/m³</span>), absorbiendo <strong class="font-mono-num">${phys.energyPct.toFixed(1)}%</strong> de la energía del martillo y frenándolo hasta <strong class="font-mono-num">${phys.thetaFDeg.toFixed(1)}°</strong>.`;
+        regimePill.className = 'ml-auto inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+        regimePill.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Comportamiento Dúctil';
+      }
+
+      // Microstructural explanation
+      const microEl = document.getElementById('charpy-micro-text');
+      const condLower = rec.condicion.toLowerCase();
+      let reason = '';
+      if (phys.isBrittle) {
+        if (condLower.includes('frío') || condLower.includes('cold')) {
+          reason = `El <strong>estirado en frío</strong> introduce una elevada densidad de dislocaciones enmarañadas (acritud) que bloquean el deslizamiento plástico adicional en la raíz de la muesca en V; ante cargas súbitas de impacto, la grieta se propaga por clivaje con escasa deformación previa.`;
+        } else if (rec.familia.includes('Resulfurados')) {
+          reason = `Las inclusiones alargadas de sulfuro de manganeso (MnS) de los aceros resulfurados mejoran la maquinabilidad pero actúan como concentradores de esfuerzos internos que facilitan la fractura frágil bajo impacto.`;
+        } else if (rec.c_pct >= 0.55) {
+          reason = `El elevado contenido de carbono (<span class="font-mono-num">${rec.c_pct}% C</span>) incrementa la fracción de cementita laminar (Fe<sub>3</sub>C), fase dura y frágil que restringe el flujo plástico y reduce la energía requerida para nuclear y propagar la fractura.`;
+        } else {
+          reason = `La combinación de resistencia elevada con ductilidad limitada (<span class="font-mono-num">${phys.elong.toFixed(1)}%</span>) impide disipar suficiente trabajo plástico en la punta de la entalla, originando una ruptura rápida de baja absorción energética.`;
+        }
+      } else {
+        if (condLower.includes('templado') || condLower.includes('q&t')) {
+          reason = `La microestructura de <strong>martensita revenida</strong> con finos carburos dispersos y elementos aleantes (Cr, Mo, Ni) combina muy alta resistencia con notable capacidad de deformación plástica, frenando eficazmente el avance de grietas en la raíz de la muesca.`;
+        } else if (condLower.includes('normalizado')) {
+          reason = `El <strong>normalizado</strong> refina el tamaño de grano y produce perlita fina homogénea (efecto Hall–Petch), multiplicando los límites de grano que desvían y frenan las microgrietas mientras permiten gran absorción de energía plástica.`;
+        } else if (condLower.includes('recocido')) {
+          reason = `El enfriamiento lento del <strong>recocido</strong> genera ferrita blanda y perlita gruesa libre de tensiones residuales, maximizando la capacidad de fluencia plástica alrededor de la muesca en V.`;
+        } else {
+          reason = `La microestructura equiaxial libre de acritud del <strong>laminado en caliente</strong>, junto con su matriz ferrítica dúctil (<span class="font-mono-num">${rec.c_pct}% C</span>), permite una deformación plástica extensa antes de cualquier ruptura.`;
+        }
+      }
+      microEl.innerHTML = `<strong>SAE ${escapeHtml(rec.grado)}</strong> (${escapeHtml(rec.familia)}, ${escapeHtml(rec.condicion)}): ${reason}`;
+    }
+
+    function drawCharpyScene() {
+      const canvas = document.getElementById('canvas-charpy');
+      if (!canvas) return;
+      const W = 860, H = 400;
+      const ctx = setupHiDPICanvas(canvas, W, H);
+      const rec = charpyState.records[charpyState.selectedIdx];
+      if (!rec) return;
+
+      // Clean scientific background
+      ctx.fillStyle = '#F8FAFC';
+      ctx.fillRect(0, 0, W, H);
+
+      // Subtle grid
+      ctx.strokeStyle = '#E2E8F0';
+      ctx.lineWidth = 0.6;
+      for (let x = 20; x < W; x += 40) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+      }
+      for (let y = 20; y < H; y += 40) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+      }
+
+      const pivotX = 430;
+      const pivotY = 178;
+      const armLen = 152;
+      const floorY = 356;
+
+      // Graduated Protractor Dial Arc (-140° to +140°, where 0° is straight down)
+      const dialR = 112;
+      ctx.save();
+      ctx.beginPath();
+      // Canvas angle: 0 rad = right, +PI/2 = down. Our theta: 0 = down, negative = left, positive = right
+      // So canvasRad = Math.PI/2 - thetaRad (Wait: if theta = -140 deg (left up), canvasRad = 90 - (-140) = 230 deg = left-up! Let's check:
+      // cos(230°) < 0 (left), sin(230°) < 0 (up). YES!
+      // If theta = 0 deg (down), canvasRad = 90° -> cos=0, sin=+1 (down). YES!
+      // If theta = +140 deg (right up), canvasRad = 90 - 140 = -50° -> cos>0 (right), sin<0 (up). YES!)
+      const thetaToCanvasRad = (deg) => ((90 - deg) * Math.PI) / 180;
+
+      // Light dial background sector
+      ctx.beginPath();
+      ctx.moveTo(pivotX, pivotY);
+      ctx.arc(pivotX, pivotY, dialR, thetaToCanvasRad(140), thetaToCanvasRad(-140), false);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.78)';
+      ctx.fill();
+      ctx.strokeStyle = '#CBD5E1';
+      ctx.lineWidth = 1.4;
+      ctx.stroke();
+
+      // Scale ticks every 10°, labels every 20°
+      for (let deg = -140; deg <= 140; deg += 10) {
+        const rad = thetaToCanvasRad(deg);
+        const major = deg % 20 === 0;
+        const rIn = major ? dialR - 11 : dialR - 6;
+        ctx.beginPath();
+        ctx.moveTo(pivotX + Math.cos(rad) * rIn, pivotY + Math.sin(rad) * rIn);
+        ctx.lineTo(pivotX + Math.cos(rad) * dialR, pivotY + Math.sin(rad) * dialR);
+        ctx.strokeStyle = major ? '#64748B' : '#CBD5E1';
+        ctx.lineWidth = major ? 1.3 : 0.8;
+        ctx.stroke();
+
+        if (major && Math.abs(deg) <= 140 && deg % 40 === 0) {
+          const rLbl = dialR - 23;
+          ctx.fillStyle = '#64748B';
+          ctx.font = '600 9px "JetBrains Mono", monospace';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(`${Math.abs(deg)}°`, pivotX + Math.cos(rad) * rLbl, pivotY + Math.sin(rad) * rLbl);
+        }
+      }
+
+      // Release angle dashed reference line (-140°)
+      const r140 = thetaToCanvasRad(-140);
+      ctx.beginPath();
+      ctx.setLineDash([4, 4]);
+      ctx.moveTo(pivotX, pivotY);
+      ctx.lineTo(pivotX + Math.cos(r140) * (armLen + 8), pivotY + Math.sin(r140) * (armLen + 8));
+      ctx.strokeStyle = 'rgba(30, 58, 138, 0.35)';
+      ctx.lineWidth = 1.2;
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Drag Needle marking max peak angle reached on right side
+      if (charpyState.peakAngleDeg !== null && charpyState.peakAngleDeg > 2) {
+        const rPeak = thetaToCanvasRad(charpyState.peakAngleDeg);
+        // Swept energy-remaining highlight arc
+        ctx.beginPath();
+        ctx.moveTo(pivotX, pivotY);
+        ctx.arc(pivotX, pivotY, dialR - 2, thetaToCanvasRad(charpyState.peakAngleDeg), thetaToCanvasRad(0), false);
+        ctx.closePath();
+        ctx.fillStyle = charpyState.isBrittle ? 'rgba(225, 29, 72, 0.10)' : 'rgba(5, 150, 105, 0.12)';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(pivotX, pivotY);
+        ctx.lineTo(pivotX + Math.cos(rPeak) * (dialR + 12), pivotY + Math.sin(rPeak) * (dialR + 12));
+        ctx.strokeStyle = '#D97706';
+        ctx.lineWidth = 2.4;
+        ctx.stroke();
+
+        // Peak angle tag
+        const tx = pivotX + Math.cos(rPeak) * (dialR + 28);
+        const ty = pivotY + Math.sin(rPeak) * (dialR + 28);
+        ctx.fillStyle = '#B45309';
+        ctx.font = '700 11px "JetBrains Mono", monospace';
+        ctx.textAlign = 'left';
+        ctx.fillText(`θf = ${charpyState.peakAngleDeg.toFixed(1)}°`, tx, ty);
+      }
+      ctx.restore();
+
+      // Tower A-Frame Columns & Baseplate
+      ctx.save();
+      ctx.fillStyle = '#334155';
+      ctx.fillRect(150, floorY, 560, 20);
+      ctx.fillStyle = '#1E293B';
+      ctx.fillRect(140, floorY + 18, 580, 10);
+
+      // Vertical support A-frame behind pivot
+      ctx.strokeStyle = '#475569';
+      ctx.lineWidth = 14;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(pivotX - 96, floorY);
+      ctx.lineTo(pivotX - 18, pivotY);
+      ctx.moveTo(pivotX + 96, floorY);
+      ctx.lineTo(pivotX + 18, pivotY);
+      ctx.stroke();
+
+      ctx.strokeStyle = '#94A3B8';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(pivotX - 96, floorY);
+      ctx.lineTo(pivotX - 18, pivotY);
+      ctx.moveTo(pivotX + 96, floorY);
+      ctx.lineTo(pivotX + 18, pivotY);
+      ctx.stroke();
+
+      // Anvil blocks at specimen impact zone
+      const specY = pivotY + armLen + 2; // 332
+      ctx.fillStyle = '#475569';
+      ctx.fillRect(pivotX - 36, specY + 6, 72, floorY - (specY + 6));
+      ctx.fillStyle = '#1E293B';
+      ctx.fillRect(pivotX - 24, specY - 12, 16, 20);
+      ctx.fillRect(pivotX + 8, specY - 12, 16, 20);
+      ctx.restore();
+
+      // Draw V-Notched Charpy Specimen (intact, bent in V, or fractured into two flying halves)
+      const drawHalfBar = (x, y, rot, isLeft) => {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.fillStyle = '#64748B';
+        ctx.strokeStyle = '#0F172A';
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        if (isLeft) {
+          ctx.moveTo(-26, -6);
+          ctx.lineTo(0, -6);
+          ctx.lineTo(-3, 0); // cleavage / notch face
+          ctx.lineTo(0, 6);
+          ctx.lineTo(-26, 6);
+        } else {
+          ctx.moveTo(0, -6);
+          ctx.lineTo(26, -6);
+          ctx.lineTo(26, 6);
+          ctx.lineTo(0, 6);
+          ctx.lineTo(3, 0);
+        }
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+        // Bright brittle cleavage facet highlight
+        ctx.strokeStyle = '#F8FAFC';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(0, -5);
+        ctx.lineTo(isLeft ? -2.5 : 2.5, 0);
+        ctx.lineTo(0, 5);
+        ctx.stroke();
+        ctx.restore();
+      };
+
+      if (!charpyState.impactTriggered) {
+        // Intact V-notched specimen resting horizontally across anvil (side/top profile clearly showing V-notch)
+        ctx.save();
+        ctx.translate(pivotX + 2, specY);
+        const barGrad = ctx.createLinearGradient(0, -8, 0, 8);
+        barGrad.addColorStop(0, '#CBD5E1');
+        barGrad.addColorStop(0.5, '#94A3B8');
+        barGrad.addColorStop(1, '#475569');
+        ctx.fillStyle = barGrad;
+        ctx.strokeStyle = '#0F172A';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(-28, -7);
+        ctx.lineTo(-4, -7);
+        ctx.lineTo(0, -1); // V-notch cut!
+        ctx.lineTo(4, -7);
+        ctx.lineTo(28, -7);
+        ctx.lineTo(28, 7);
+        ctx.lineTo(-28, 7);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+      } else if (charpyState.isBrittle) {
+        // Two fractured halves flying off!
+        drawHalfBar(charpyState.leftHalf.x, charpyState.leftHalf.y, charpyState.leftHalf.rot, true);
+        drawHalfBar(charpyState.rightHalf.x, charpyState.rightHalf.y, charpyState.rightHalf.rot, false);
+      } else {
+        // Ductile specimen bent plastically into a V shape without breaking
+        ctx.save();
+        const shiftX = Math.min(24, charpyState.bendAngle * 24);
+        ctx.translate(pivotX + 6 + shiftX, specY - 2);
+        const halfBend = charpyState.bendAngle * 0.72; // radians per wing
+
+        // Left wing bent forward/up
+        ctx.save();
+        ctx.rotate(-halfBend);
+        ctx.fillStyle = '#64748B';
+        ctx.strokeStyle = '#0F172A';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(-27, -6, 28, 12, 2);
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+
+        // Right wing bent forward/down
+        ctx.save();
+        ctx.rotate(halfBend);
+        ctx.fillStyle = '#64748B';
+        ctx.strokeStyle = '#0F172A';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(-1, -6, 28, 12, 2);
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+
+        // Warm plastic hinge strain zone at V vertex
+        ctx.beginPath();
+        ctx.arc(0, 0, 5, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(217, 119, 6, 0.75)';
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // Draw Pendulum Arm & Hammer Striker
+      const pRad = thetaToCanvasRad(charpyState.angleDeg);
+      const bobX = pivotX + Math.cos(pRad) * armLen;
+      const bobY = pivotY + Math.sin(pRad) * armLen;
+
+      ctx.save();
+      // Pendulum arm rod
+      ctx.strokeStyle = '#1E3A8A';
+      ctx.lineWidth = 6;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(pivotX, pivotY);
+      ctx.lineTo(bobX, bobY);
+      ctx.stroke();
+
+      ctx.strokeStyle = '#60A5FA';
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.moveTo(pivotX, pivotY);
+      ctx.lineTo(bobX, bobY);
+      ctx.stroke();
+
+      // Contoured Charpy Hammer Head rotated tangent to arm
+      ctx.translate(bobX, bobY);
+      ctx.rotate(pRad - Math.PI / 2);
+      const hamGrad = ctx.createLinearGradient(-22, -16, 22, 16);
+      hamGrad.addColorStop(0, '#1E3A8A');
+      hamGrad.addColorStop(0.5, '#1D4ED8');
+      hamGrad.addColorStop(1, '#172554');
+      ctx.fillStyle = hamGrad;
+      ctx.strokeStyle = '#0F172A';
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.roundRect(-22, -14, 44, 28, 6);
+      ctx.fill();
+      ctx.stroke();
+
+      // Hardened striker edge (amber accent)
+      ctx.fillStyle = '#D97706';
+      ctx.beginPath();
+      ctx.moveTo(18, -8);
+      ctx.lineTo(28, 0);
+      ctx.lineTo(18, 8);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+
+      // Pivot bearing hub
+      ctx.beginPath();
+      ctx.arc(pivotX, pivotY, 12, 0, Math.PI * 2);
+      ctx.fillStyle = '#1E293B';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(pivotX, pivotY, 5, 0, Math.PI * 2);
+      ctx.fillStyle = '#E2E8F0';
+      ctx.fill();
+
+      // Corner HUD annotations
+      ctx.fillStyle = '#334155';
+      ctx.font = '600 11px "JetBrains Mono", monospace';
+      ctx.textAlign = 'left';
+      ctx.fillText(`Probeta: SAE ${rec.grado} (${shortCond(rec.condicion)})`, 22, 26);
+      ctx.fillStyle = '#64748B';
+      ctx.font = '500 10px "JetBrains Mono", monospace';
+      ctx.fillText(`Iₜ = ${rec.indice_tenacidad.toFixed(1)} MJ/m³ · Elong. = ${rec.elongacion.toFixed(1)}%`, 22, 42);
+
+      // Left release badge
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#1E3A8A';
+      ctx.font = '600 10px "JetBrains Mono", monospace';
+      ctx.fillText('Liberación: 140°', 22, 66);
+    }
+
+    function resetCharpy() {
+      if (charpyState.animId) cancelAnimationFrame(charpyState.animId);
+      charpyState.animId = null;
+      charpyState.phase = 'idle';
+      charpyState.angleDeg = -140;
+      charpyState.peakAngleDeg = null;
+      charpyState.impactTriggered = false;
+      charpyState.bendAngle = 0;
+
+      document.getElementById('charpy-btn-run').disabled = false;
+      document.getElementById('charpy-live-angle').textContent = 'θ = 140.0° (Listo)';
+
+      const rec = charpyState.records[charpyState.selectedIdx];
+      if (rec) updateCharpyInfoCards(rec, false);
+      drawCharpyScene();
+    }
+
+    function runCharpySimulation() {
+      const rec = charpyState.records[charpyState.selectedIdx];
+      if (!rec) return;
+      if (charpyState.animId) cancelAnimationFrame(charpyState.animId);
+
+      const phys = calcCharpyPhysics(rec);
+      charpyState.phase = 'falling';
+      charpyState.startTime = performance.now();
+      charpyState.lastFrameTime = charpyState.startTime;
+      charpyState.angleDeg = -140;
+      charpyState.peakAngleDeg = 0;
+      charpyState.impactTriggered = false;
+      charpyState.isBrittle = phys.isBrittle;
+      charpyState.energyPct = phys.energyPct;
+      charpyState.targetFinalDeg = phys.thetaFDeg;
+      charpyState.bendAngle = 0;
+
+      const pivotX = 430;
+      const specY = 178 + 152 + 2;
+      const floorY = 356;
+
+      // Initial velocities for fractured halves if brittle
+      charpyState.leftHalf = { x: pivotX - 10, y: specY, vx: 165, vy: -245, rot: 0, vrot: -7.5 };
+      charpyState.rightHalf = { x: pivotX + 14, y: specY, vx: 310, vy: -195, rot: 0, vrot: 9.2 };
+
+      document.getElementById('charpy-btn-run').disabled = true;
+      LabAudio.playCharpyWhoosh(0.68);
+
+      const T_FALL = 680;
+      const T_RISE = 780;
+      const T_SETTLE = 900;
+
+      function step(now) {
+        const dtTotal = now - charpyState.startTime;
+        const dtSec = Math.min(0.04, (now - charpyState.lastFrameTime) / 1000);
+        charpyState.lastFrameTime = now;
+
+        if (dtTotal < T_FALL) {
+          // Gravity-like acceleration from -140° to 0°
+          const u = dtTotal / T_FALL;
+          const easeIn = Math.pow(u, 1.95);
+          charpyState.angleDeg = -140 * (1 - easeIn);
+          document.getElementById('charpy-live-angle').textContent = `θ = ${Math.abs(charpyState.angleDeg).toFixed(1)}° (Caída)`;
+        } else {
+          if (!charpyState.impactTriggered) {
+            charpyState.impactTriggered = true;
+            charpyState.phase = 'follow';
+            LabAudio.playCharpyImpact(charpyState.isBrittle);
+            updateCharpyInfoCards(rec, true);
+          }
+
+          const tAfter = dtTotal - T_FALL;
+          if (tAfter < T_RISE) {
+            // Decelerate smoothly to peak angle thetaFDeg
+            const u = tAfter / T_RISE;
+            const easeOut = 1 - Math.pow(1 - u, 2.2);
+            charpyState.angleDeg = charpyState.targetFinalDeg * easeOut;
+            charpyState.peakAngleDeg = Math.max(charpyState.peakAngleDeg || 0, charpyState.angleDeg);
+            document.getElementById('charpy-live-angle').textContent = `θ = ${charpyState.angleDeg.toFixed(1)}° (Ascenso)`;
+          } else if (tAfter < T_RISE + T_SETTLE) {
+            // Gentle damped settle back from peak while needle stays at peakAngleDeg
+            const u = (tAfter - T_RISE) / T_SETTLE;
+            charpyState.peakAngleDeg = charpyState.targetFinalDeg;
+            const damp = Math.exp(-3.2 * u);
+            charpyState.angleDeg = charpyState.targetFinalDeg * Math.cos(u * Math.PI * 1.35) * damp;
+            document.getElementById('charpy-live-angle').textContent = `θf máx = ${charpyState.targetFinalDeg.toFixed(1)}°`;
+          } else {
+            charpyState.phase = 'done';
+            charpyState.peakAngleDeg = charpyState.targetFinalDeg;
+            charpyState.angleDeg = 0;
+            charpyState.animId = null;
+            document.getElementById('charpy-btn-run').disabled = false;
+            document.getElementById('charpy-live-angle').textContent = `θf = ${charpyState.targetFinalDeg.toFixed(1)}° (Completado)`;
+            drawCharpyScene();
+            return;
+          }
+
+          // Update specimen animation post-impact
+          if (charpyState.isBrittle) {
+            const g = 680;
+            [charpyState.leftHalf, charpyState.rightHalf].forEach(h => {
+              h.vy += g * dtSec;
+              h.x += h.vx * dtSec;
+              h.y += h.vy * dtSec;
+              h.rot += h.vrot * dtSec;
+              if (h.y > floorY - 7) {
+                h.y = floorY - 7;
+                h.vy *= -0.34;
+                h.vx *= 0.68;
+                h.vrot *= 0.55;
+              }
+              if (h.x > 820) { h.x = 820; h.vx *= -0.4; }
+            });
+          } else {
+            const targetBend = Math.min(1.05, 0.52 + (rec.elongacion / 35) * 0.5);
+            charpyState.bendAngle += (targetBend - charpyState.bendAngle) * Math.min(1, dtSec * 12);
+          }
+        }
+
+        drawCharpyScene();
+        charpyState.animId = requestAnimationFrame(step);
+      }
+
+      charpyState.animId = requestAnimationFrame(step);
+    }
+
+    function renderTab7() {
+      bindLabSoundTogglesOnce();
+      const sel = document.getElementById('charpy-select');
+      if (!sel.dataset.bound) {
+        sel.dataset.bound = '1';
+        charpyState.records = DATA.registros;
+
+        sel.innerHTML = charpyState.records.map((r, i) => {
+          const tag = (r.elongacion < 15 || r.indice_tenacidad < 85) ? 'Frágil' : 'Dúctil';
+          return `<option value="${i}">SAE ${escapeHtml(r.grado)} — ${escapeHtml(r.condicion)} (Iₜ: ${r.indice_tenacidad.toFixed(1)} · Elong: ${r.elongacion}% · ${tag})</option>`;
+        }).join('');
+
+        // Default to a classic tough steel (SAE 6150 Normalized or first ductile)
+        const defIdx = charpyState.records.findIndex(r => r.grado === '6150' && r.condicion.includes('Normalizado'));
+        charpyState.selectedIdx = defIdx >= 0 ? defIdx : 0;
+        sel.value = String(charpyState.selectedIdx);
+
+        // Build 3 contrasting quick presets
+        const idxBrittle = charpyState.records.findIndex(r => r.grado === '1211' && r.condicion.includes('Cold drawn'));
+        const idxMidBrittle = charpyState.records.findIndex(r => r.grado === '1045' && r.condicion.includes('Cold drawn'));
+        const idxDuctile = charpyState.selectedIdx;
+        const presets = [];
+        if (idxBrittle >= 0) presets.push({ label: `Frágil: SAE 1211 Cold drawn`, idx: idxBrittle, cls: 'hover:bg-rose-50 hover:text-rose-700' });
+        if (idxMidBrittle >= 0) presets.push({ label: `Acritud: SAE 1045 Cold drawn`, idx: idxMidBrittle, cls: 'hover:bg-amber-50 hover:text-[#B45309]' });
+        if (idxDuctile >= 0) presets.push({ label: `Alta Tenacidad: SAE ${charpyState.records[idxDuctile].grado}`, idx: idxDuctile, cls: 'hover:bg-emerald-50 hover:text-emerald-700' });
+
+        document.getElementById('charpy-presets').innerHTML = presets.map(p => `
+          <button type="button" data-c-idx="${p.idx}" class="px-2.5 py-1 rounded-md bg-slate-100 ${p.cls} border border-slate-200 text-[11px] font-medium text-slate-700 transition">
+            ${escapeHtml(p.label)}
+          </button>
+        `).join('');
+
+        document.querySelectorAll('#charpy-presets button').forEach(b => {
+          b.addEventListener('click', () => {
+            charpyState.selectedIdx = Number(b.dataset.cIdx);
+            sel.value = String(charpyState.selectedIdx);
+            resetCharpy();
+          });
+        });
+
+        sel.addEventListener('change', () => {
+          charpyState.selectedIdx = Number(sel.value);
+          resetCharpy();
+        });
+
+        document.getElementById('charpy-btn-run').addEventListener('click', runCharpySimulation);
+        document.getElementById('charpy-btn-reset').addEventListener('click', resetCharpy);
+      }
+
+      resetCharpy();
+    }
+
+    // ============================================================
     // TAB NAVIGATION & LIFECYCLE
     // ============================================================
     function ensureTabRendered(tabId) {
@@ -5661,6 +7488,8 @@
       else if (tabId === 'tab3') renderTab3();
       else if (tabId === 'tab4') renderTab4();
       else if (tabId === 'tab5') renderTab5();
+      else if (tabId === 'tab6') renderTab6();
+      else if (tabId === 'tab7') renderTab7();
     }
 
     function switchTab(tabId) {
@@ -5680,6 +7509,8 @@
         panel.querySelectorAll('.js-plotly-plot').forEach(plot => {
           try { Plotly.Plots.resize(plot); } catch (_) {}
         });
+        if (tabId === 'tab6') drawBrinellScene();
+        if (tabId === 'tab7') drawCharpyScene();
       });
     }
 
@@ -5708,6 +7539,8 @@
           panel.querySelectorAll('.js-plotly-plot').forEach(plot => {
             try { Plotly.Plots.resize(plot); } catch (_) {}
           });
+          if (state.activeTab === 'tab6') drawBrinellScene();
+          if (state.activeTab === 'tab7') drawCharpyScene();
         }, 120);
       });
     });
