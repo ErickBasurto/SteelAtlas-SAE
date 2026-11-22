@@ -2,7 +2,7 @@
 
 Aplicación web interactiva para el análisis de composición química, tratamientos térmicos/mecánicos y propiedades mecánicas de aceros SAE al carbono y de baja aleación.
 
-🔗 **Ver aplicación interactiva en vivo:** [https://TU-USUARIO.github.io/steel-atlas-sae/](https://TU-USUARIO.github.io/steel-atlas-sae/)
+🔗 **Ver aplicación interactiva en vivo:** [https://erickbasurto.github.io/steel-atlas-sae/](https://erickbasurto.github.io/steel-atlas-sae/)
 
 ---
 
